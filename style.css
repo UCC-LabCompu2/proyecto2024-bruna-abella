@@ -3,8 +3,8 @@ body{
 }
 #cannvas{
     position: fixed;
-    bottom: 100;
-    right: 1000;
+    bottom: 100px;
+    right: 1000px;
 }
 #navtext{
    font-family: Arial   ;
@@ -15,7 +15,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #232323;
 }
 #ctext{
     margin-left: 10px;
@@ -35,8 +35,8 @@ button{
 }
     div{
         position: fixed;
-        bottom: 400;
-        right: 1000;
+        bottom: 400px;
+        right: 1000px;
             border-radius: 25px;
             background: #fcfc75;
             padding: 20px;
