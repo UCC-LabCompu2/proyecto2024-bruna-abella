@@ -17,9 +17,10 @@ ul {
     overflow: hidden;
     background-color: #232323;
 }
+
 #ctext{
     margin-left: 10px;
-margin-top: 15px;
+   margin-top: 30px;
 }
 #rcorners1 {
     border-radius: 25px;

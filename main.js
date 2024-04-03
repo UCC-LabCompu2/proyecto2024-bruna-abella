@@ -38,9 +38,9 @@ function dibujar(funcion,color,ancho) {
 }
 
 
-dibujar((x)=>-Math.fround(Math.tan(x)+0),"black",1);
+dibujar((x)=>-Math.fround(5*Math.pow(x,2)+2*x+3),"black",1);
 
-dibujar((x)=>-Math.fround(Math.log(Math.sqrt(Math.pow(x,2)+x-1))),"purple",1);
+
 
 
 // OLD
