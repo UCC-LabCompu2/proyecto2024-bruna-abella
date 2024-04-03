@@ -2,7 +2,7 @@ let canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
 // Calculos previos para todas las funciones a graficar
-const scale = 100;
+const scale = 60;
 let pixelStep = 1/scale;
 w = canvas.width;
 h = canvas.height;
@@ -38,7 +38,10 @@ function dibujar(funcion,color,ancho) {
 }
 
 
-dibujar((x)=>-Math.fround((Math.pow(x,5)*4)+(Math.pow(x,2)*5)+0),"black",1);
+dibujar((x)=>-Math.fround(Math.tan(x)+0),"black",1);
+
+dibujar((x)=>-Math.fround(Math.log(Math.sqrt(Math.pow(x,2)+x-1))),"purple",1);
+
 
 // OLD
 
@@ -89,75 +92,4 @@ for (let index = 0; index < 160; index += 0.5) {
 }
 
 */
-
-// reference
-
-/*
-    var ctx = canvas.getContext("2d");
-    var h = canvas.height;    
-    var w = canvas.width;
-    var cw = w / 2; // centers
-    var ch = h / 2; 
-    var subStepCount = 10;  // number of sub setps
-    var scale = 10;         // scale of the plot
-
-  
-    function plot(func,col,lineWidth){
-        var invScale = 1 / scale;    // inverted scale is the size of a pixel
-        var top = ch * invScale;     // get top and bottom
-        var bottom = -ch * invScale;
-        var subStep = invScale / subStepCount; // get the sub steps between pixels
-        var x,y,yy,xx,subX;                    // xx,yy are the coords of prev point
-        var start = (-cw - 1) * invScale;      // get the start and end
-        var end = (cw + 1) * invScale;
-        // set render styles
-        ctx.strokeStyle = col;
-        ctx.lineWidth = lineWidth * invScale; // scale line to be constant size
-
-        ctx.beginPath();
-        for(x = start; x < end; x += invScale){ // pixel steps
-            for(subX = 0; subX < invScale; subX += subStep){  // sub steps
-                y = func(x+subX);                    // get y for x 
-                if(yy !== undefined){                // is this not the first point
-                    if(y > top || y < bottom){       // this y outside ?
-                        if(yy < top && yy > bottom){ // last yy inside?
-                            ctx.lineTo(x + subX,y);
-                        }
-                    } else {                         // this y must be inside
-                        if(yy > top || yy < bottom){ // was last yy outside
-                            ctx.moveTo(xx,yy);       // start a new path
-                        }
-                        if(subX === 0){              // are we at a pixel 
-                            if(y > bottom && y < top){  // are we inside
-                                // if the step is large then might be a line break
-                                if(Math.abs(yy-y) > (top - bottom) * (1/3)){ 
-                                    ctx.moveTo(x,y);  
-                                }else{
-                                    ctx.lineTo(x,y);
-                                }
-                            }
-                        }
-                    }
-                }else{
-                    if(subX === 0){
-                        ctx.moveTo(x,y);
-                    }
-                }
-                yy  = y;
-                xx = x+ subX;
-            }
-        }
-        ctx.stroke();
-
-        
-    }
-        
-    // set the plot scale and orientation 
-    ctx.setTransform(scale,0,0,-scale,cw, ch);
-    // two example function plots
-    plot((x)=>Math.tan(Math.cos(x/2) * 10),"#F88",1)
-    plot((x)=>Math.tan(x),"blue",2)
-*/
-
-
 
