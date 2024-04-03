@@ -1,3 +1,15 @@
+body{
+    margin: 0;
+}
+#cannvas{
+    position: fixed;
+    bottom: 100;
+    right: 1000;
+}
+#navtext{
+   font-family: Arial   ;
+    margin: 7px;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -5,7 +17,37 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+#ctext{
+    margin-left: 10px;
+margin-top: 15px;
+}
+#rcorners1 {
+    border-radius: 25px;
+    background: #fcfc75;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+button{
+    background-color: #a6a6a6;
+    border-radius: 25px;
 
+}
+    div{
+        position: fixed;
+        bottom: 400;
+        right: 1000;
+            border-radius: 25px;
+            background: #fcfc75;
+            padding: 20px;
+            width: 300px;
+            height: auto;
+
+    }
+
+body {
+    background-color:white;
+}
 li {
     float: left;
 }
@@ -17,7 +59,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-
+g
 li a:hover {
     background-color: #111;
 }

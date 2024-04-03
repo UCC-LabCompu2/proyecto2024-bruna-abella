@@ -7,9 +7,15 @@
 </head>
 <body>
 <ul>
-    <li><a href="index.html">inicio</a> </li>
-    <li><a href="flineal.html">Graficar funcion lineal</a> </li>
-    <li><a href="fcuadratica.html">Graficar funciion cuadratica</a> </li>
+    <li><a href="index.html"><h4 id="navtext">inicio</h4></a> </li>
+   <li><h4 style="font-family:Arial;color: white">Calculadora graficadora de funciones</h4></li>
 </ul>
+<form>
+    <label id="ctext" for="funcion">ingrese la funcion a graficar:</label><br>
+    <input id="ctext" type="text" id="funcion"name="funcion">
+    <button>graficar</button>
+</form>
+<canvas  id=canvas width = 2000 height = 1000 style="border-style: solid; width: 80%;height: 85%;position: fixed;bottom: 25;right: 10;"></canvas>
+<script src="main.js"></script>
 </body>
 </html>
