@@ -37,8 +37,15 @@ function dibujar(funcion,color,ancho) {
     }
 }
 
+let graficoForm = document.getElementById("form-graph");
 
-dibujar((x)=>-Math.fround(5*Math.pow(x,2)+2*x+3),"black",1);
+graficoForm.addEventListener("submit", (form)=>{
+    form.preventDefault();
+    let funciontext = (document.getElementById("funcion").value);
+    
+    dibujar((x)=>(-Math.fround(eval(funciontext))),"black",1);
+})
+
 
 
 
