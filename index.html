@@ -1,8 +1,8 @@
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>claculadora graficadora</title>
     <link rel="stylesheet"href="style.css">
 </head>
 
@@ -12,8 +12,21 @@
    <li><h4 style="font-family:Arial;color: white">Calculadora graficadora de funciones</h4></li>
 </ul>
 <form id="form-graph">
-        <input class="grafd" type="text" id="funcion"name="funcion"></input>
-        <button type="submit">Graficar</button>
+    <label id="ctext" style="position: fixed;top: 55px" for="funcion">Ingrese la funcion a graficar:</label><br>
+        <input style="margin-left: 10px; margin-top: 30px;" class="grafd" type="text" id="funcion" name="funcion"></input>
+        <button type="submit" >Graficar</button>
+</form>
+<label style="margin-left: 10px;" for="color">color de grafico</label>
+<form id="color">
+<select style="margin-left: 10px; margin-top: 15px;" name="colorgraf" id="colorgraf">
+    <option value="red" >rojo</option>
+    <option value="yellow">amarillo</option>
+    <option value="orange">naranja</option>
+    <option value="purple">violeta</option>
+    <option value="black">negro</option>
+
+</select>
+    <input type="submit" value="seleccionar">
 </form>
 <img src="Screenshot%202024-04-03%20201106.png" style="width: 80%;height: 85%;position: fixed;bottom: 25px;right: 10px">
 <canvas  id=canvas width = 2000 height = 1000 style="border-style: solid; width: 80%;height: 85%;position: fixed;bottom: 25px;right: 10px;"></canvas>
