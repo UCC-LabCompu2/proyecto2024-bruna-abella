@@ -42,8 +42,8 @@ let graficoForm = document.getElementById("form-graph");
 graficoForm.addEventListener("submit", (form)=>{
     form.preventDefault();
     let funciontext = (document.getElementById("funcion").value);
-    
-    dibujar((x)=>(-Math.fround(eval(funciontext))),"black",1);
+    let color = document.getElementById("colorgraf").value;
+    dibujar((x)=>(-Math.fround(eval(funciontext))),color,1);
 })
 
 
