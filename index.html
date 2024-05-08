@@ -1,4 +1,4 @@
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +7,81 @@
 </head>
 
 <body>
+
 <ul>
     <li><a href="index.html"><h4 id="navtext">inicio</h4></a> </li>
-   <li><h4 style="font-family:Arial;color: white">Calculadora graficadora de funciones</h4></li>
+    <li><h4 style="font-family:Arial;color: white">Calculadora graficadora de funciones</h4></li>
 </ul>
-<form id="form-graph" style="height: 300px; width: 200px; position: relative; display: block; justify-content: space-between;">
-        <label id="ctext" style="position: fixed;top: 55px" for="funcion">Ingrese la funcion a graficar:</label><br>
-        <input style="margin-left: 10px; margin-top: 30px;" class="grafd" type="text" id="funcion" name="funcion"></input>
-        <select style="margin-left: 10px; margin-top: 15px;" name="colorgraf" id="colorgraf">
-            <option value="#ff0000" >rojo</option>
-            <option value="#fff000">amarillo</option>
-            <option value="#ff8B00">naranja</option>
-            <option value="#800080">violeta</option>
-            <option value="#000000">negro</option>
-        </select>
-        <button type="submit" >Graficar</button>
-</form>
+<div class="row">
+    <div class="column-2">
+        <form id="form-graph">
+            <label id="ctext" style="position: relative;top: 25px" for="funcion">Ingrese la funcion a graficar:</label><br>
+            <input style="margin-left: 10px; margin-top: 30px;" class="grafd" type="text" id="funcion" name="funcion">
+            <select style="margin-left: 10px; margin-top: 15px;" name="colorgraf" id="colorgraf">
+                <option value="#ff0000" >rojo</option>
+                <option value="#fff000">amarillo</option>
+                <option value="#ff8B00">naranja</option>
+                <option value="#800080">violeta</option>
+                <option value="#000000">negro</option>
+            </select>
+            <button class="button" type="submit" >Graficar</button>
+            <button class="button" type="reset" >reiniciar grafico</button>
+        </form>
+        <table>
+            <tr>
+                <th>funciones</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>cos</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>sen</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>tan</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>X^2</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>X^3</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>Euler</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>Ln</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>PI</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>log</td>
+                <td>insertar</td>
+            </tr>
+            <tr>
+                <td>raiz cuadrada</td>
+                <td>insertar</td>
+            </tr>
+        </table>
+    </div>
 
-<img src="Screenshot%202024-04-03%20201106.png" style="width: 80%;height: 85%;position: fixed;bottom: 25px;right: 10px">
-<canvas  id=canvas width = 2000 height = 1000 style="border-style: solid; width: 80%;height: 85%;position: fixed;bottom: 25px;right: 10px;"></canvas>
-
+    <div class="column-1">
+        <div style="display:none;">
+            <img id="bg-img" style="height: 100%; width: 100%; object-fit: fill;" src="grid.png">
+        </div>
+        <canvas  class="canvas" id=canvas width = 2000 height = 1000></canvas>
+    </div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

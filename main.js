@@ -2,6 +2,8 @@ let canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
 // Calculos previos para todas las funciones a graficar
+const imagen = document.getElementById("bg-img");
+ctx.drawImage(imagen,30,-68);
 const scale = 60;
 let pixelStep = 1/scale;
 w = canvas.width;
@@ -14,6 +16,7 @@ var pixel = w/40;
 const yscale = h/20;
 ctx.translate(canvas.width/2,canvas.height/2);
 let raiz = 0;
+
 ctx.fillRect(0,0,1,1);
 
 
@@ -25,7 +28,7 @@ function dibujar(funcion,color,ancho) {
     for (let x = -20; x < 20; x += pixelStep) {
         y = (funcion(x)*yscale);
         yy = funcion((x+pixelStep))*yscale;
-        
+
         counter++;
         if (Math.abs(yy*yscale) > 100000) {
             continue;

@@ -1,13 +1,8 @@
 body{
     margin: 0;
 }
-#cannvas{
-    position: fixed;
-    bottom: 100px;
-    right: 1000px;
-}
 #navtext{
-   font-family: Arial   ;
+    font-family: Arial   ;
     margin: 7px;
 }
 ul {
@@ -17,10 +12,14 @@ ul {
     overflow: hidden;
     background-color: #232323;
 }
-
+table, th, td {
+    margin-left: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 #ctext{
     margin-left: 10px;
-   margin-top: 30px;
+    margin-top: 30px;
 }
 #rcorners1 {
     border-radius: 25px;
@@ -29,22 +28,12 @@ ul {
     width: 200px;
     height: 150px;
 }
-button{
+.button{
     background-color: #a6a6a6;
     border-radius: 25px;
-
+    margin-top: 10px;
+    margin-left: 10px;
 }
-    div{
-        position: fixed;
-        bottom: 400px;
-        right: 1000px;
-            border-radius: 25px;
-            background: #fcfc75;
-            padding: 20px;
-            width: 300px;
-            height: auto;
-
-    }
 
 body {
     background-color:white;
@@ -62,4 +51,57 @@ li a {
 }
 li a:hover {
     background-color: #111;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+    justify-items: center;
+    align-items: center;
+
+}
+
+
+
+.column-1 {
+
+    height: 100%;
+    width: 80%;
+}
+
+.canvas {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    position: relative;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.column-2 {
+    align-self:  center;
+    position: relative;
+    height: 100%;
+    width: 20%;
+}
+
+@media (max-width: 970px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .column-2 {
+        display: flex;
+        position: relative;
+        height: 25%;
+        align-self: center;
+        justify-items: center;
+    }
+    .column-1 {
+        height: 75%;
+    }
 }
