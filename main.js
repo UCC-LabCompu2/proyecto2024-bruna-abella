@@ -19,6 +19,14 @@ let raiz = 0;
 
 ctx.fillRect(0,0,1,1);
 
+class funcion {
+    constructor(funcion,color,ancho) {
+        this.funcion = funcion;
+        this.color = color;
+        this.ancho = ancho;
+    }
+}
+
 
 // Dibujar funciones
 function dibujar(funcion,color,ancho) {
@@ -28,7 +36,7 @@ function dibujar(funcion,color,ancho) {
     for (let x = -20; x < 20; x += pixelStep) {
         y = (funcion(x)*yscale);
         yy = funcion((x+pixelStep))*yscale;
-
+        
         counter++;
         if (Math.abs(yy*yscale) > 100000) {
             continue;
@@ -47,59 +55,11 @@ graficoForm.addEventListener("submit", (form)=>{
     let funciontext = (document.getElementById("funcion").value);
     let color = document.getElementById("colorgraf").value;
     dibujar((x)=>(-Math.fround(eval(funciontext))),color,1);
-})
+});
 
+// Añadir math objects 
 
-
-
-
-// OLD
-
-/*
-let lengtpxx = Math.round(canvas.width/160);
-let lengtpxy = Math.round(canvas.height/160);
-console.log(canvas.clientWidth);
-console.log(lengtpxx);
-
-
-for (let i = 0; i <= (160); i++) {
-    ctx.beginPath();
-
-    ctx.strokeStyle = "grey";
-    console.log(i*lengtpxx*10);
-    //Vertical 
-    ctx.moveTo(i*lengtpxx*2,0);
-    ctx.lineTo(i*lengtpxx*2,canvas.height);
-    if ((i*lengtpxx*2) == (canvas.height/2)) {
-        ctx.strokeStyle = "red";
-    }
-    ctx.stroke();
-    //Horizontal
-    ctx.moveTo(0,i*lengtpxy*2);
-    ctx.lineTo(canvas.width,i*lengtpxy*2);
-    ctx.stroke();
+function insert_b(value) {
+    let fun = document.getElementById("funcion");
+    fun.value = fun.value + value;
 }
-ctx.closePath();
-
-let fx = [];
-ctx.translate(0,canvas.height/2);
-function f(x) {
-    console.log("fx: ",x);
-    console.log(-Math.pow(x,5));
-    return -Math.pow(x,2);
-}
-
-for (let x = -40; x < 40; x += 0.5) {
-    fx.push(f(x));
-}
-// Draw pow (x,2)
-
-for (let index = 0; index < 160; index += 0.5) {
-    ctx.beginPath();
-    ctx.moveTo(index*lengtpxx,fx[index]);
-    ctx.lineTo((index+1)*lengtpxx,fx[index+1])
-    ctx.stroke();
-}
-
-*/
-
