@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 'Poppins';font-size: 22px;
 }
 #navtext{
     font-family: Arial   ;
@@ -12,9 +13,31 @@ ul {
     overflow: hidden;
     background-color: #232323;
 }
-table, th, td {
-    margin-left: 10px;
-    border: 1px solid black;
+
+table {
+    animation: bootup 1s;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-spacing: 0;
+    border: 2px solid rgba(0, 0, 0, 0.315);
+    background: #fff;
+    border-radius: 10px solid;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+
+}
+
+#form-graph {
+    animation: bootup 1s;
+}
+
+th, td {
+    padding: 2%;
+    align-items: center;
+    border-bottom: 1px solid rgb(107, 107, 107);
     border-collapse: collapse;
 }
 #ctext{
@@ -28,9 +51,27 @@ table, th, td {
     width: 200px;
     height: 150px;
 }
+
+#Insert-B {
+    font-weight: 600;
+    color: white;
+    border: 1px solid rgba(104, 104, 104, 0.295);
+    border-radius: 4px;
+    background-color: #2ea44f;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
 .button{
-    background-color: #a6a6a6;
-    border-radius: 25px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid rgba(104, 104, 104, 0.295);
+    border-radius: 4px;
+    background-color: #2ea44f;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    padding: 4px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -72,9 +113,10 @@ li a:hover {
 }
 
 .canvas {
-    margin: auto;
-    height: 100%;
-    width: 100%;
+    animation: bootupGraph 1s;
+    margin: 0;
+    height: 90%;
+    width: 95%;
     padding: 0%;
     position: relative;
     border-style: solid;
@@ -82,11 +124,55 @@ li a:hover {
 }
 
 .column-2 {
+    align-items: center;
+    justify-content: center;
     align-self:  center;
     position: relative;
     height: 100%;
     width: 20%;
 }
+
+
+.Insert-table { 
+    border-radius: 10px;
+}
+
+.Table-Header {
+
+    margin: 0;
+    background-color: #232323;
+    padding: 0;
+    color: rgb(189, 189, 189);
+    font-weight: 200;
+}
+
+
+
+
+@keyframes bootup {
+    0% {
+        top: 10px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes bootupGraph {
+    0% {
+
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+
+
 
 @media (max-width: 970px) {
     .row {
@@ -103,5 +189,10 @@ li a:hover {
     }
     .column-1 {
         height: 75%;
+    }
+
+    #Insert-table {
+        position: absolute;
+        visibility: hidden;
     }
 }

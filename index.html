@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>claculadora graficadora</title>
     <link rel="stylesheet"href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 
 <body>
@@ -25,45 +26,50 @@
                 <option value="#000000">negro</option>
             </select>
             <button class="button" type="submit" >Graficar</button>
-            <button class="button" type="reset" >reiniciar grafico</button>
+            <button class="button" type="reset" >Reiniciar Grafico</button>
         </form>
-        <table id="Insert-table">
-            <tr>
-                <th>funciones</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>cos</td>
-                <td><button id="Insert-B" value="Math.cos()" onClick="insert_b(this.value)" >Insertar</button></td>
-            </tr>
-            <tr>
-                <td>sen</td>
-                <td><button id="Insert-B" value="Math.sin()" onClick="insert_b(this.value)" >Insertar</button></td>
-            </tr>
-            <tr>
-                <td>tan</td>
-                <td><button id="Insert-B" value="Math.tan()" onClick="insert_b(this.value)" >Insertar</button></td>
-            </tr>
-            <tr>
-                <td>X^2</td>
-                <td><button id="Insert-B" value="Math.pow(x,2)" onClick="insert_b(this.value)">Insertar</button></td>
-            </tr>
-            <tr>
-                <td>Euler</td>
-                <td><button id="Insert-B" value="Math.e" onClick="insert_b(this.value)">Insertar</button></td>
-            </tr>
-            <tr>
-                <td>Ln</td>
-                <td><button id="Insert-B" value="Math.log(x)" onClick="insert_b(this.value)">Insertar</button></td>
-            </tr>
-            <tr>
-                <td>PI</td>
-                <td><button id="Insert-B" value="Math.PI" onClick="insert_b(this.value)">Insertar</button> </td>
-            </tr>
-            <tr>
-                <td>raiz cuadrada</td>
-                <td><button id="Insert-B" value="Math.sqrt()" onClick="insert_b(this.value)">Insertar</button></td>
-            </tr>
+        <table id="Insert-table" class="Insert-table">
+            <thead class="Table-Header">
+                <tr >
+                    <th>Funciones</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cos</td>
+                    <td><button id="Insert-B" value="Math.cos()" onClick="insert_b(this.value)" >Insertar</button></td>
+                </tr>
+                <tr>
+                    <td>Sen</td>
+                    <td><button id="Insert-B" value="Math.sin()" onClick="insert_b(this.value)" >Insertar</button></td>
+                </tr>
+                <tr>
+                    <td>Tan</td>
+                    <td><button id="Insert-B" value="Math.tan()" onClick="insert_b(this.value)" >Insertar</button></td>
+                </tr>
+                <tr>
+                    <td>X^2</td>
+                    <td><button id="Insert-B" value="Math.pow(x,2)" onClick="insert_b(this.value)">Insertar</button></td>
+                </tr>
+                <tr>
+                    <td>Euler</td>
+                    <td><button id="Insert-B" value="Math.e" onClick="insert_b(this.value)">Insertar</button></td>
+                </tr>
+                <tr>
+                    <td>Ln</td>
+                    <td><button id="Insert-B" value="Math.log(x)" onClick="insert_b(this.value)">Insertar</button></td>
+                </tr>
+                <tr>
+                    <td>PI</td>
+                    <td><button id="Insert-B" value="Math.PI" onClick="insert_b(this.value)">Insertar</button> </td>
+                </tr>
+                <tr>
+                    <td>Raiz Cuadrada</td>
+                    <td><button id="Insert-B" value="Math.sqrt()" onClick="insert_b(this.value)">Insertar</button></td>
+                </tr>
+            </tbody>
+           
         </table>
     </div>
 
@@ -77,3 +83,5 @@
 <script src="main.js"></script>
 </body>
 </html>
+
+
