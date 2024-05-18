@@ -1,29 +1,22 @@
 let canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
-// Calculos previos para todas las funciones a graficar
+// Calculos previos para todas las funciones a graficar.
+
 const imagen = document.getElementById("bg-img");
 ctx.drawImage(imagen,24,-68);
-const scale = 60;
+const scale = 100;
 let pixelStep = 1/scale;
-w = canvas.width;
-h = canvas.height;
-cx = w/2;
-cy = h/2;
-step = w/40*scale;
-var counter = 1;
-var pixel = w/40;
-const yscale = h/20;
-ctx.translate(canvas.width/2,canvas.height/2);
-let raiz = 0;
-
-ctx.fillRect(0,0,1,1);
+w = canvas.width; // El ancho del canvas
+h = canvas.height; // El largo del canvas
+step = w/40*scale; 
+var pixel = w/40; // La cantidad de pixeles en el canvas que equivalen a un valor de x.
+const yscale = h/20; // La cantidad de pixeles en el canvas que equivalen a un valor de y.
+ctx.translate(canvas.width/2,canvas.height/2); // Movemos nuestro (0,0) al centro del canvas.
 
 
 
-
-
-function Alerta() {
+function Alerta() { // Si no se ingresa una funcion valida se le alertara al usuario.
     alert("ERROR: La funcion ingresada no se puede graficar!");
 }
 
@@ -35,19 +28,18 @@ function dibujar(funcion,color,ancho) {
     ctx.lineWidth = ancho;
 
     for (let x = -20; x < 20; x += pixelStep) {
+       setTimeout(function () { // Usamos timeout para simular una animacion al momento de hacer los calculos y graficar.
         y = (funcion(x)*yscale);
         yy = funcion((x+pixelStep))*yscale;
-        counter++;
-        if (Math.abs(yy*yscale) > 100000) {
-            continue;
+
+        if (Math.abs(yy*yscale) > 50000) { // Con esto buscamos evitar lo maximo posible graficar cosas fuera del canvas.
+            return;
         }
-        setTimeout(function () {
-            console.log("x");
-        },10000)
-        ctx.moveTo(x*pixel,y);
+        ctx.moveTo(x*pixel,y); 
         ctx.lineTo((x+pixelStep)*pixel,yy);
         ctx.stroke();
         console.log(funcion(x).toFixed(1));
+       },1000)
     }
 }
 
@@ -61,24 +53,9 @@ graficoForm.addEventListener("submit", (form)=>{
     dibujar((x)=>(-Math.fround(eval(funciontext))),color,1);
 });
 
-// Añadir math objects 
-
-
-
-
 
 function insert_b(value) {
     let fun = document.getElementById("funcion");
     fun.value = fun.value + value;
 }
 
-
-
-class funcion {
-    constructor(funcion,color,ancho) {
-        this.funcion = funcion;
-        this.color = color;
-        this.ancho = ancho;
-    }
-    
-}

@@ -192,7 +192,7 @@ li a:hover {
 
 
 
-@media (max-width: 970px) {
+@media (max-width: 1300px) {
     .row {
         display: flex;
         flex-direction: column;
@@ -218,4 +218,9 @@ li a:hover {
         text-align: center;
 
     }
+    h4 {
+        font-size: small;
+    }
+
 }
+
