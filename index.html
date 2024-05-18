@@ -9,13 +9,15 @@
 
 <body>
 
-<ul>
-    <li><a href="index.html"><h4 id="navtext">inicio</h4></a> </li>
+<ul class="navbar">
+    <div><img class="Navbar-image" src="Logo.png" alt=""></div>
+    <li><a href="index.html"><h4 id="navtext">Inicio</h4></a> </li>
     <li><h4 style="font-family:Arial;color: white">Calculadora graficadora de funciones</h4></li>
+    
 </ul>
 <div class="row">
     <div class="column-2">
-        <form id="form-graph">
+        <form id="form-graph" class="form">
             <label id="ctext" style="position: relative;top: 25px" for="funcion">Ingrese la funcion a graficar:</label><br>
             <input style="margin-left: 10px; margin-top: 30px;" class="grafd" type="text" id="funcion" name="funcion">
             <select style="margin-left: 10px; margin-top: 15px;" name="colorgraf" id="colorgraf">
@@ -26,7 +28,7 @@
                 <option value="#000000">negro</option>
             </select>
             <button class="button" type="submit" >Graficar</button>
-            <button class="button" type="reset" >Reiniciar Grafico</button>
+            <button class="button" type="reset" ><a href="index.html" class="no-decoration">Reiniciar Grafico</a></button>
         </form>
         <table id="Insert-table" class="Insert-table">
             <thead class="Table-Header">
@@ -74,10 +76,9 @@
     </div>
 
     <div class="column-1">
-        <div style="display:none;">
-            <img id="bg-img" style="height: 100%; width: 100%; object-fit: fill;" src="grid.png">
-        </div>
-        <canvas  class="canvas" id=canvas width = 2000 height = 1000></canvas>
+       
+        <canvas  class="canvas" id=canvas width = 2000 height = 1000> <img id="bg-img" style="height: 100%; width: 100%; object-fit:cover;" src="grid.png"></canvas>
+        
     </div>
 </div>
 <script src="main.js"></script>

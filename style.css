@@ -2,8 +2,14 @@ body{
     margin: 0;
     font-family: 'Poppins';font-size: 22px;
 }
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
 #navtext{
-    font-family: Arial   ;
+    font-family: Arial;
     margin: 7px;
 }
 ul {
@@ -107,7 +113,7 @@ li a:hover {
 
 
 .column-1 {
-
+    margin-top: 10px;
     height: 100%;
     width: 80%;
 }
@@ -146,7 +152,19 @@ li a:hover {
     font-weight: 200;
 }
 
+.Navbar-image {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: white;
 
+    margin-left: 2%;
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: white;
+}
 
 
 @keyframes bootup {
@@ -181,6 +199,7 @@ li a:hover {
         align-items: center;
     }
     .column-2 {
+        justify-content: center;
         display: flex;
         position: relative;
         height: 25%;
@@ -194,5 +213,9 @@ li a:hover {
     #Insert-table {
         position: absolute;
         visibility: hidden;
+    }
+    .form {
+        text-align: center;
+
     }
 }
