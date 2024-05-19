@@ -1,17 +1,25 @@
-body{
+body {
     margin: 0;
-    font-family: 'Poppins';font-size: 22px;
+    font-family: 'Poppins';
+    font-size: 22px;
 }
 
-.navbar{
+.h1 {
+    font-size: large;
+    color: white;
+    font-family: Arial;
+}
+
+.navbar {
     display: flex;
     align-items: center;
 }
 
-#navtext{
+#navtext {
     font-family: Arial;
     margin: 7px;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -29,7 +37,8 @@ table {
     border-spacing: 0;
     border: 2px solid rgba(0, 0, 0, 0.315);
     background: #fff;
-    border-radius: 10px solid;
+    border-radius: 10px;
+    border-style: solid;
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -46,10 +55,14 @@ th, td {
     border-bottom: 1px solid rgb(107, 107, 107);
     border-collapse: collapse;
 }
-#ctext{
+
+#ctext {
     margin-left: 10px;
     margin-top: 30px;
+    position: relative;
+    top: 25px
 }
+
 #rcorners1 {
     border-radius: 25px;
     background: #fcfc75;
@@ -58,24 +71,34 @@ th, td {
     height: 150px;
 }
 
-#Insert-B {
+.grafd {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.grafd2 {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.Insert-B {
     font-weight: 600;
     color: white;
     border: 1px solid rgba(104, 104, 104, 0.295);
     border-radius: 4px;
     background-color: #2ea44f;
-    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     padding: 4px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.button{
+.button {
     font-weight: 600;
     color: white;
     border: 1px solid rgba(104, 104, 104, 0.295);
     border-radius: 4px;
     background-color: #2ea44f;
-    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     padding: 4px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     margin-top: 10px;
@@ -83,8 +106,9 @@ th, td {
 }
 
 body {
-    background-color:white;
+    background-color: white;
 }
+
 li {
     float: left;
 }
@@ -96,6 +120,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+
 li a:hover {
     background-color: #111;
 }
@@ -111,11 +136,16 @@ li a:hover {
 }
 
 
-
 .column-1 {
     margin-top: 10px;
     height: 100%;
     width: 80%;
+}
+
+.canvasimg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .canvas {
@@ -127,19 +157,20 @@ li a:hover {
     position: relative;
     border-style: solid;
     overflow: hidden;
+
 }
 
 .column-2 {
     align-items: center;
     justify-content: center;
-    align-self:  center;
+    align-self: center;
     position: relative;
     height: 100%;
     width: 20%;
 }
 
 
-.Insert-table { 
+.Insert-table {
     border-radius: 10px;
 }
 
@@ -190,14 +221,13 @@ li a:hover {
 }
 
 
-
-
 @media (max-width: 1300px) {
     .row {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .column-2 {
         justify-content: center;
         display: flex;
@@ -206,6 +236,7 @@ li a:hover {
         align-self: center;
         justify-items: center;
     }
+
     .column-1 {
         height: 75%;
     }
@@ -214,10 +245,12 @@ li a:hover {
         position: absolute;
         visibility: hidden;
     }
+
     .form {
         text-align: center;
 
     }
+
     h4 {
         font-size: small;
     }
