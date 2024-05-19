@@ -3,87 +3,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>claculadora graficadora</title>
-    <link rel="stylesheet"href="style.css">
+    <meta content="Abella Bruna" name="Maximo Bruna">
+    <meta content="proyecto final laboratorio de computos 2" name="calculadora graficadora de funciones">
+    <meta content="">
+    <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
+<header>
+    <ul class="navbar">
+        <div><img class="Navbar-image" src="images/Logo.png" alt=""></div>
 
-<ul class="navbar">
-    <div><img class="Navbar-image" src="images/Logo.png" alt=""></div>
-    <li><a href="index.html"><h4 id="navtext">Inicio</h4></a> </li>
-    <li><h4 style="font-family:Arial;color: white">Calculadora graficadora de funciones</h4></li>
-    
-</ul>
+        <li><a href="index.html"><h1 class="h1">Calculadora graficadora de funciones</h1></a></li>
+
+    </ul>
+</header>
+
 <div class="row">
     <div class="column-2">
         <form id="form-graph" class="form">
-            <label id="ctext" style="position: relative;top: 25px" for="funcion">Ingrese la funcion a graficar:</label><br>
-            <input style="margin-left: 10px; margin-top: 30px;" class="grafd" type="text" id="funcion" name="funcion">
-            <select style="margin-left: 10px; margin-top: 15px;" name="colorgraf" id="colorgraf">
-                <option value="#ff0000" >rojo</option>
-                <option value="#fff000">amarillo</option>
-                <option value="#ff8B00">naranja</option>
-                <option value="#800080">violeta</option>
-                <option value="#000000">negro</option>
-            </select>
-            <button class="button" type="submit" >Graficar</button>
-            <button class="button" type="reset" ><a href="index.html" class="no-decoration">Reiniciar Grafico</a></button>
+            <label id="ctext" for="funcion">Ingrese la función a
+                graficar:</label><br>
+            <input class="grafd" type="text" id="funcion" name="funcion">
+            <label for="colorgraf">
+                <select class="grafd2" name="colorgraf" id="colorgraf">
+
+                    <option value="#ff0000">rojo</option>
+                    <option value="#fff000">amarillo</option>
+                    <option value="#ff8B00">naranja</option>
+                    <option value="#800080">violeta</option>
+                    <option value="#000000">negro</option>
+                </select></label>
+            <button class="button" type="submit">Graficar</button>
+            <button class="button" type="reset"><a href="index.html" class="no-decoration">Reiniciar Gráfico</a>
+            </button>
         </form>
         <table id="Insert-table" class="Insert-table">
             <thead class="Table-Header">
-                <tr >
-                    <th>Funciones</th>
-                    <th></th>
-                </tr>
+            <tr>
+                <th>Funciones</th>
+                <th></th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Cos</td>
-                    <td><button id="Insert-B" value="Math.cos()" onClick="insert_b(this.value)" >Insertar</button></td>
-                </tr>
-                <tr>
-                    <td>Sen</td>
-                    <td><button id="Insert-B" value="Math.sin()" onClick="insert_b(this.value)" >Insertar</button></td>
-                </tr>
-                <tr>
-                    <td>Tan</td>
-                    <td><button id="Insert-B" value="Math.tan()" onClick="insert_b(this.value)" >Insertar</button></td>
-                </tr>
-                <tr>
-                    <td>X^2</td>
-                    <td><button id="Insert-B" value="Math.pow(x,2)" onClick="insert_b(this.value)">Insertar</button></td>
-                </tr>
-                <tr>
-                    <td>Euler</td>
-                    <td><button id="Insert-B" value="Math.e" onClick="insert_b(this.value)">Insertar</button></td>
-                </tr>
-                <tr>
-                    <td>Ln</td>
-                    <td><button id="Insert-B" value="Math.log(x)" onClick="insert_b(this.value)">Insertar</button></td>
-                </tr>
-                <tr>
-                    <td>PI</td>
-                    <td><button id="Insert-B" value="Math.PI" onClick="insert_b(this.value)">Insertar</button> </td>
-                </tr>
-                <tr>
-                    <td>Raiz Cuadrada</td>
-                    <td><button id="Insert-B" value="Math.sqrt()" onClick="insert_b(this.value)">Insertar</button></td>
-                </tr>
+            <tr>
+                <td>Cos</td>
+                <td>
+                    <button class="Insert-B" value="Math.cos()" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Sen</td>
+                <td>
+                    <button class="Insert-B" value="Math.sin()" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tan</td>
+                <td>
+                    <button class="Insert-B" value="Math.tan()" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>X^2</td>
+                <td>
+                    <button class="Insert-B" value="Math.pow(x,2)" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Euler</td>
+                <td>
+                    <button class="Insert-B" value="Math.e" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Ln</td>
+                <td>
+                    <button class="Insert-B" value="Math.log(x)" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>PI</td>
+                <td>
+                    <button class="Insert-B" value="Math.PI" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Raiz Cuadrada</td>
+                <td>
+                    <button class="Insert-B" value="Math.sqrt()" onClick="insert_b(this.value)">Insertar</button>
+                </td>
+            </tr>
             </tbody>
-           
+
         </table>
     </div>
 
     <div class="column-1">
-       
-        <canvas  class="canvas" id=canvas width = 2000 height = 1000> <img id="bg-img" style="height: 100%; width: 100%; object-fit:cover;" src="images/grid.png"></canvas>
-        
+
+        <canvas class="canvas" id=canvas width=2000 height=1000><img id="bg-img"
+                                                                     src="images/grid.png"></canvas>
+
     </div>
 </div>
 <script src="main.js"></script>
-<script src="Calculos.js"></script>
 </body>
 </html>
 
