@@ -3,15 +3,15 @@
 
 ### Indice: 
 
-         - [Link al proyecto](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#link-al-proyecto-cacluladora-graficadora-de-funciones)
-         - [Estructura](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#estructura-semantica-del-html)
-         - [Tecnologias Empleadas](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#tecnologias-empleadas)
-         - [Utilizacion](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#como-utilizar-la-calculadora)
+1. [Link](#link-al-proyecto-cacluladora-graficadora-de-funciones)
+2. [Estructura HTML](#estructura-semantica-del-html)
+3. [Tecnologias](#tecnologias-empleadas)
+4. [Utilizacion](#como-utilizar-la-calculadora)
 
 
 
 
-- ### Link al proyecto [Cacluladora Graficadora de Funciones](https://ucc-labcompu2.github.io/proyecto2024-bruna-abella/)
+- ## Link al proyecto [Cacluladora Graficadora de Funciones](https://ucc-labcompu2.github.io/proyecto2024-bruna-abella/)
 
 
 
