@@ -5,15 +5,15 @@
    <details>
       <summary>Contenidos</summary>
       <ul>
-         [Link](#link)
-         [Estructura](#estructura)
-         [Tecnologias Empleadas](#tecno)
-         [Utilizacion](#util)
+         - [Link al proyecto](#link)
+         - [Estructura](#estructura)
+         - [Tecnologias Empleadas](#tecno)
+         - [Utilizacion](#util)
       </ul>
    </details>
 
 
-<a name="link"></a>
+<a name="link">
 - ### Link al proyecto [Cacluladora Graficadora de Funciones](https://ucc-labcompu2.github.io/proyecto2024-bruna-abella/)
 
 
