@@ -3,10 +3,10 @@
 
 ### Indice: 
 
-         - [Link al proyecto](#link-al-proyecto)
-         - [Estructura](#estructura-semantica-del-html)
-         - [Tecnologias Empleadas](#tecnologias-empleadas)
-         - [Utilizacion](#como-utilizar-la-calculadora)
+         - [[Link al proyecto](#link-al-proyecto)](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#link-al-proyecto-cacluladora-graficadora-de-funciones)
+         - [[Estructura](#estructura-semantica-del-html)](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#estructura-semantica-del-html)
+         - [[Tecnologias Empleadas](#tecnologias-empleadas)](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#tecnologias-empleadas)
+         - [[Utilizacion](#como-utilizar-la-calculadora)](https://github.com/UCC-LabCompu2/proyecto2024-bruna-abella/blob/main/README.md#como-utilizar-la-calculadora)
 
 
 
