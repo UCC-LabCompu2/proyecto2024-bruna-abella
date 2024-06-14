@@ -5,19 +5,19 @@
    <details>
       <summary>Contenidos</summary>
       <ul>
-         - [Link al proyecto](#link)
-         - [Estructura](#estructura)
-         - [Tecnologias Empleadas](#tecno)
-         - [Utilizacion](#util)
+         - [Link al proyecto](#link-al-proyecto)
+         - [Estructura](#estructura-semantica-del-html)
+         - [Tecnologias Empleadas](#tecnologias-empleadas)
+         - [Utilizacion](#como-utilizar-la-calculadora)
       </ul>
    </details>
 
 
-<a name="link">
+
 - ### Link al proyecto [Cacluladora Graficadora de Funciones](https://ucc-labcompu2.github.io/proyecto2024-bruna-abella/)
 
 
-<a name="estructura"></a>
+
 ## Estructura semantica del Html.
 1. **Body**
    - **NavBar**
@@ -30,7 +30,7 @@
 
 2. ***Se ha implementado un formulario el cual obtiene una funcion igresada por el usuario y a partir de que el usuario hace sumbit el codigo escrito en javascript lo interpreta y grafica la funcion en un cavas. Se utilizo un "timeout" para simular una animacion al momento de graficar la funcion.***
 
-<a name="tecno"></a>
+
 ## Tecnologias Empleadas:
  - Codigo en HTML para el front end de la pagina.
  - Javascript para el Backend. Donde se trabaja con un canvas y un input.
