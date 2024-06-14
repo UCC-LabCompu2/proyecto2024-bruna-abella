@@ -2,15 +2,12 @@
 ## Autores: Maximo Abella Y Facundo Bruna
 
 ### Indice: 
-   <details>
-      <summary>Contenidos</summary>
-      <ul>
+
          - [Link al proyecto](#link-al-proyecto)
          - [Estructura](#estructura-semantica-del-html)
          - [Tecnologias Empleadas](#tecnologias-empleadas)
          - [Utilizacion](#como-utilizar-la-calculadora)
-      </ul>
-   </details>
+
 
 
 
