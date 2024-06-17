@@ -54,7 +54,8 @@ table {
     animation: bootup 1s;
 }
 
-th, td {
+th,
+td {
     padding: 2%;
     align-items: center;
     border-bottom: 1px solid rgb(107, 107, 107);
@@ -208,6 +209,7 @@ li a:hover {
         top: 10px;
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         top: 0px;
@@ -219,6 +221,7 @@ li a:hover {
 
         opacity: 0;
     }
+
     100% {
         opacity: 1;
 
@@ -252,10 +255,11 @@ li a:hover {
         height: 75%;
     }
 
-    
+
     .canvas {
         margin: auto;
     }
+
     #Insert-table {
         position: absolute;
         visibility: hidden;
@@ -288,7 +292,7 @@ li a:hover {
     height: 100px;
 }
 
-.container { 
+.container {
 
     height: 100%;
     justify-content: center;
