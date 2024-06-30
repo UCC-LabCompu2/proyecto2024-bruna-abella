@@ -61,9 +61,9 @@ let dibujar = (funcion, color, ancho) => {
 
     const scale = 100;
     var pixelStep = 1 / scale;
-    w = canvas.width; // El ancho del canvas
-    h = canvas.height; // El largo del canvas
-    step = w / 40 * scale;
+    const w = canvas.width; // El ancho del canvas
+    const h = canvas.height; // El largo del canvas
+    const step = w / 40 * scale;
     var pixel = w / 40; // La cantidad de pixeles en el canvas que equivalen a un valor de x.
     const yscale = h / 20; // La cantidad de pixeles en el canvas que equivalen a un valor de y.
 
@@ -85,6 +85,10 @@ let dibujar = (funcion, color, ancho) => {
 
 
 
+/**
+ * @method generarGrafico - Dibujara la funcion Ingresada si esta es valida.
+ * @param {*} form - Objeto formulario que se pasa al hacer submit 
+ */
 
 let generarGrafico = (form) => {
     form.preventDefault();
@@ -93,9 +97,9 @@ let generarGrafico = (form) => {
         AlertaERRORCampo();
     }
     try {
-        if (checkValido((x) => (-Math.fround(eval(funciontext)))) == true) {
+        if (checkValido((X) => (-Math.fround(eval(funciontext)))) == true) {
             let color = document.getElementById("colorgraf").value;
-            dibujar((x) => (-Math.fround(eval(funciontext))), color, 1);
+            dibujar((X) => (-Math.fround(eval(funciontext))), color, 1);
         }
     } catch (error) {
         AlertaERRORCampo();
@@ -103,7 +107,10 @@ let generarGrafico = (form) => {
     }
 }
 
-
+/**
+ * @method insert_b - Inserta una funcion de la tabla en el campo de texto.
+ * @param {string} value - valor del boton apretado.
+ */
 let insert_b = (value) => {
     let fun = document.getElementById("funcion");
     fun.value = fun.value + value;
