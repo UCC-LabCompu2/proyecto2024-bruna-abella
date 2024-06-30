@@ -1,4 +1,4 @@
-var canvas = document.getElementById("canvas"), // Variable Global del canvas. Es necesaria para la funcion dibujar.
+const canvas = document.getElementById("canvas"), // Variable Global del canvas. Es necesaria para la funcion dibujar.
     ctx = canvas.getContext("2d");
 
 
@@ -59,11 +59,11 @@ let dibujar = (funcion, color, ancho) => {
     ctx.lineWidth = ancho;
 
     const scale = 100;
-    var pixelStep = 1 / scale;
+    const pixelStep = 1 / scale;
     const w = canvas.width; // El ancho del canvas
     const h = canvas.height; // El largo del canvas
     const step = w / 40 * scale;
-    var pixel = w / 40; // La cantidad de pixeles en el canvas que equivalen a un valor de x.
+    const pixel = w / 40; // La cantidad de pixeles en el canvas que equivalen a un valor de x.
     const yscale = h / 20; // La cantidad de pixeles en el canvas que equivalen a un valor de y.
 
     for (let x = -20; x < 20; x += pixelStep) {
