@@ -82,11 +82,12 @@ let dibujar = (funcion, color, ancho) => {
     }
 }
 
-
 /**
  * @method generarGrafico - Dibujara la funcion Ingresada si esta es valida.
  * @param {*} form - Objeto formulario que se pasa al hacer submit
  */
+let color1=document.getElementById("colorgraf").innerHTML;
+
 
 let generarGrafico = (form) => {
     form.preventDefault();
