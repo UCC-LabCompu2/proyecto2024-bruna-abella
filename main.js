@@ -2,26 +2,26 @@ var canvas = document.getElementById("canvas"), // Variable Global del canvas. E
     ctx = canvas.getContext("2d");
 
 
-window.onload = function() {
+window.onload = function () {
     const imagen = new Image();
     imagen.src = "images/grid.png";
     ctx.drawImage(imagen, 24, -68);
-    ctx.translate(canvas.width / 2, canvas.height / 2); 
+    ctx.translate(canvas.width / 2, canvas.height / 2);
 };
 
 /**
- * FUncion Que Pone una alerta general al usuario.
+ * Función Que Pone una alerta general al usuario.
  * @method AlertaERRORCampo
  */
 
-let AlertaERRORCampo = () => { // Si no se ingresa una funcion valida se le alertara al usuario.
+let AlertaERRORCampo = () => { // Si no se ingresa una función valida se le alertará al usuario.
     alert("ERROR: La funcion ingresada no se puede graficar!");
 }
 
 /**
- * Esta funcion se fija si encuetran algun valor distinto A NaN ya que eso contaria como funcion.
+ * Esta función se fija si encuetran algún valor distinto A NaN ya que eso contaria como funcion.
  * @method checkValido
- * @param {*} expresion - Expresion de la funcion a Graficar.
+ * @param {*} expresion - Expresion de la función a Graficar.
  * @returns true o false
  */
 
@@ -45,14 +45,13 @@ let checkValido = (expresion) => {
 }
 
 
-
 // Dibujar funciones
 
 /**
  * @method dibujar
- * @param {*} funcion - Pasa la expresion de la funcion a graficar.
- * @param {string} color - Pasa el color de la funcion a graficar.
- * @param {int} ancho - Pasa el ancho de la funcion a graficar.
+ * @param {*} funcion - Pasa la expresion de la función a graficar.
+ * @param {string} color - Pasa el color de la función a graficar.
+ * @param {int} ancho - Pasa el ancho de la función a graficar.
  */
 let dibujar = (funcion, color, ancho) => {
     ctx.beginPath();
@@ -84,10 +83,9 @@ let dibujar = (funcion, color, ancho) => {
 }
 
 
-
 /**
  * @method generarGrafico - Dibujara la funcion Ingresada si esta es valida.
- * @param {*} form - Objeto formulario que se pasa al hacer submit 
+ * @param {*} form - Objeto formulario que se pasa al hacer submit
  */
 
 let generarGrafico = (form) => {
