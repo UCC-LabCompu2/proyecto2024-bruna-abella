@@ -82,6 +82,21 @@ let dibujar = (funcion, color, ancho) => {
     }
 }
 
+
+/**
+ * @method agregarHistorial - Agregara la funcion al historial si esta se puede dibujar.
+ * @param {string} text - Funcion.
+ * @param {string} color - Color de la funcion.
+ */
+let agregarHistorial = (text,color) => {
+    
+    var thtml = '<tr>';
+    thtml += '<td>' + text + '</td><td>' + color + '</td></tr>';
+    document.getElementById("Historial").innerHTML += thtml;
+}
+
+
+
 /**
  * @method generarGrafico - Dibujara la funcion Ingresada si esta es valida.
  * @param {*} form - Objeto formulario que se pasa al hacer submit
@@ -98,12 +113,16 @@ let generarGrafico = (form) => {
         if (checkValido((X) => (-Math.fround(eval(funciontext)))) == true) {
             let color = document.getElementById("colorgraf").value;
             dibujar((X) => (-Math.fround(eval(funciontext))), color, 1);
+            agregarHistorial(funciontext,color);
         }
     } catch (error) {
         AlertaERRORCampo();
         document.getElementById("funcion").value = "";
     }
 }
+
+
+
 
 /**
  * @method insert_b - Inserta una funcion de la tabla en el campo de texto.
