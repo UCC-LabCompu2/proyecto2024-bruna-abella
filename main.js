@@ -89,7 +89,7 @@ let dibujar = (funcion, color, ancho) => {
  * @param {string} color - Color de la funcion.
  */
 let agregarHistorial = (text,color) => {
-    
+    document.getElementById("tabla_historial").style.display = "block"
     let thtml = '<tr>';
     thtml += '<td>' + text + '</td><td>' + color + '</td></tr>';
     document.getElementById("Historial").innerHTML += thtml;
@@ -113,7 +113,7 @@ let generarGrafico = (form) => {
         if (checkValido((X) => (-Math.fround(eval(funciontext)))) == true) {
             let color = document.getElementById("colorgraf").value;
             dibujar((X) => (-Math.fround(eval(funciontext))), color, 1);
-            agregarHistorial(funciontext,color);
+            agregarHistorial(funciontext,(document.querySelector('#colorgraf option:checked').textContent));
         }
     } catch (error) {
         AlertaERRORCampo();

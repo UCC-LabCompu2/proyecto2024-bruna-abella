@@ -193,10 +193,13 @@ li a:hover {
     color: white;
 }
 
-.Hitorial_table {
-    display: table;
 
+.Hitorial_table {
+    position: relative;
+    display:none;
+    max-height: 200px;
     overflow-y: scroll;
+    padding: 5px;
 }
 
 
