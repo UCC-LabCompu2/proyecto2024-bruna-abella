@@ -90,7 +90,7 @@ let dibujar = (funcion, color, ancho) => {
  */
 let agregarHistorial = (text,color) => {
     
-    var thtml = '<tr>';
+    let thtml = '<tr>';
     thtml += '<td>' + text + '</td><td>' + color + '</td></tr>';
     document.getElementById("Historial").innerHTML += thtml;
 }
