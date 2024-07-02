@@ -199,6 +199,7 @@ li a:hover {
     display:none;
     max-height: 200px;
     overflow-y: scroll;
+    overflow-x: scroll;
     padding: 5px;
 }
 
