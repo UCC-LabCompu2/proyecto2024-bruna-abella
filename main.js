@@ -30,8 +30,7 @@ let checkValido = (expresion) => {
     for (let i = -20; i < 20; i++) {
 
         if (isNaN(expresion(i))) {
-            console.log("NAAAN");
-            if (expresion(i) != expresion(i + 1)) {
+            if (isNaN(expresion(i+1) == false)) {
                 distintos++;
             }
         } else {
