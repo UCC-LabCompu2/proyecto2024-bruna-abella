@@ -11,7 +11,7 @@
 
 
 
-- ## Link al proyecto [Cacluladora Graficadora de Funciones](https://ucc-labcompu2.github.io/proyecto2024-bruna-abella/)
+- ## Link al proyecto [Calculadora Graficadora de Funciones](https://ucc-labcompu2.github.io/proyecto2024-bruna-abella/)
 
 
 
