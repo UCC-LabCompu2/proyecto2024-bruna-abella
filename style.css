@@ -196,7 +196,7 @@ li a:hover {
 
 .Hitorial_table {
     position: relative;
-    display:none;
+    display: none;
     max-height: 200px;
     overflow-y: scroll;
     overflow-x: scroll;

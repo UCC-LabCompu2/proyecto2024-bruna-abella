@@ -30,7 +30,7 @@ let checkValido = (expresion) => {
     for (let i = -20; i < 20; i++) {
 
         if (isNaN(expresion(i))) {
-            if (isNaN(expresion(i+1) == false)) {
+            if (isNaN(expresion(i + 1) == false)) {
                 distintos++;
             }
         } else {
@@ -86,7 +86,7 @@ let dibujar = (funcion, color, ancho) => {
  * @param {string} text - Funcion.
  * @param {string} color - Color de la funcion.
  */
-let agregarHistorial = (text,color) => {
+let agregarHistorial = (text, color) => {
     document.getElementById("tabla_historial").style.display = "block"
     let thtml = '<tr>';
     thtml += '<td>' + text + '</td><td>' + color + '</td></tr>';
@@ -110,7 +110,7 @@ let generarGrafico = (form) => {
         if (checkValido((x) => (-Math.fround(eval(modifiedInput)))) == true) {
             let color = document.getElementById("colorgraf").value;
             dibujar((x) => (-Math.fround(eval(modifiedInput))), color, 1);
-            agregarHistorial(modifiedInput,(document.querySelector('#colorgraf option:checked').textContent));
+            agregarHistorial(modifiedInput, (document.querySelector('#colorgraf option:checked').textContent));
         }
     } catch (error) {
         AlertaERRORCampo();
