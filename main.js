@@ -30,14 +30,14 @@ let checkValido = (expresion) => {
     for (let i = -20; i < 20; i++) {
 
         if (isNaN(expresion(i))) {
-            if (isNaN(expresion(i + 1) == false)) {
+            if (isNaN(expresion(i + 1)) === false) {
                 distintos++;
             }
         } else {
             return true;
         }
     }
-    if (distintos == 0) {
+    if (distintos === 0) {
         return false;
     }
     return true;
@@ -103,11 +103,11 @@ let generarGrafico = (form) => {
     form.preventDefault();
     const funciontext = (document.getElementById("funcion").value);
     const modifiedInput = funciontext.replaceAll("X", 'x');
-    if (funciontext == "" || funciontext == " ") {
+    if (funciontext === "" || funciontext === " ") {
         AlertaERRORCampo();
     }
     try {
-        if (checkValido((x) => (-Math.fround(eval(modifiedInput)))) == true) {
+        if (checkValido((x) => (-Math.fround(eval(modifiedInput)))) === true) {
             let color = document.getElementById("colorgraf").value;
             dibujar((x) => (-Math.fround(eval(modifiedInput))), color, 1);
             agregarHistorial(modifiedInput, (document.querySelector('#colorgraf option:checked').textContent));
