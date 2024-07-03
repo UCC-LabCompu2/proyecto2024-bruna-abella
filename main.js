@@ -43,7 +43,6 @@ let checkValido = (expresion) => {
     return true;
 }
 
-
 // Dibujar funciones
 
 /**
@@ -61,6 +60,7 @@ let dibujar = (funcion, color, ancho) => {
     const pixelStep = 1 / scale;
     const w = canvas.width; // El ancho del canvas
     const h = canvas.height; // El largo del canvas
+    const step = w / 40 * scale;
     const pixel = w / 40; // La cantidad de pixeles en el canvas que equivalen a un valor de x.
     const yscale = h / 20; // La cantidad de pixeles en el canvas que equivalen a un valor de y.
 
@@ -94,32 +94,29 @@ let agregarHistorial = (text,color) => {
 }
 
 
-
 /**
  * @method generarGrafico - Dibujara la funcion Ingresada si esta es valida.
  * @param {*} form - Objeto formulario que se pasa al hacer submit
  */
 
-
 let generarGrafico = (form) => {
     form.preventDefault();
     const funciontext = (document.getElementById("funcion").value);
+    const modifiedInput = funciontext.replaceAll("X", 'x');
     if (funciontext == "" || funciontext == " ") {
         AlertaERRORCampo();
     }
     try {
-        if (checkValido((X) => (-Math.fround(eval(funciontext)))) == true) {
+        if (checkValido((x) => (-Math.fround(eval(modifiedInput)))) == true) {
             let color = document.getElementById("colorgraf").value;
-            dibujar((X) => (-Math.fround(eval(funciontext))), color, 1);
-            agregarHistorial(funciontext,(document.querySelector('#colorgraf option:checked').textContent));
+            dibujar((x) => (-Math.fround(eval(modifiedInput))), color, 1);
+            agregarHistorial(modifiedInput,(document.querySelector('#colorgraf option:checked').textContent));
         }
     } catch (error) {
         AlertaERRORCampo();
         document.getElementById("funcion").value = "";
     }
 }
-
-
 
 
 /**
