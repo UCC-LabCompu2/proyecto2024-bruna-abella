@@ -60,7 +60,6 @@ let dibujar = (funcion, color, ancho) => {
     const pixelStep = 1 / scale;
     const w = canvas.width; // El ancho del canvas
     const h = canvas.height; // El largo del canvas
-    const step = w / 40 * scale;
     const pixel = w / 40; // La cantidad de pixeles en el canvas que equivalen a un valor de x.
     const yscale = h / 20; // La cantidad de pixeles en el canvas que equivalen a un valor de y.
 
